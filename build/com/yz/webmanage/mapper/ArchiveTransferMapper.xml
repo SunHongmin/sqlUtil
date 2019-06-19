@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yz.webmanage.mapper.ArchiveTransferMapper">
+
+<resultMap type="com.yz.webmanage.model.ArchiveTransfer" id="archivetransfer">
+<result property="transfer_no" column="transfer_no"  />
+<result property="opertime" column="opertime"  />
+<result property="operid" column="operid"  />
+<result property="operprivilege" column="operprivilege"  />
+<result property="operdepid" column="operdepid"  />
+<result property="project_name" column="project_name"  />
+<result property="unit" column="unit"  />
+<result property="piece" column="piece"  />
+<result property="dep_transfer" column="dep_transfer"  />
+<result property="dep_receive" column="dep_receive"  />
+<result property="name_transfer" column="name_transfer"  />
+<result property="name_receive" column="name_receive"  />
+<result property="date_transfer" column="date_transfer"  />
+<result property="date_receive" column="date_receive"  />
+<result property="is_confirm" column="is_confirm"  />
+<result property="confirm_time" column="confirm_time"  />
+<result property="confirm_userid" column="confirm_userid"  />
+<result property="transfer_type" column="transfer_type"  />
+</resultMap>
+
+<!-- insert (No primary key parameters required) -->
+<insert id="saveArchiveTransfer" parameterType="com.yz.webmanage.model.ArchiveTransfer" >
+insert into EAMS_ARCHIVE_TRANSFER(opertime,operid,operprivilege,operdepid,project_name,unit,piece,dep_transfer,dep_receive,name_transfer,name_receive,date_transfer,date_receive,is_confirm,confirm_time,confirm_userid,transfer_type) values(#{opertime,jdbcType=TIMESTAMP},#{operid,jdbcType=VARCHAR},#{operprivilege,jdbcType=VARCHAR},#{operdepid,jdbcType=VARCHAR},#{project_name,jdbcType=VARCHAR},#{unit,jdbcType=VARCHAR},#{piece,jdbcType=VARCHAR},#{dep_transfer,jdbcType=VARCHAR},#{dep_receive,jdbcType=VARCHAR},#{name_transfer,jdbcType=VARCHAR},#{name_receive,jdbcType=VARCHAR},#{date_transfer,jdbcType=VARCHAR},#{date_receive,jdbcType=VARCHAR},#{is_confirm,jdbcType=VARCHAR},#{confirm_time,jdbcType=TIMESTAMP},#{confirm_userid,jdbcType=VARCHAR},#{transfer_type,jdbcType=VARCHAR})
+</insert>
+
+<!-- insert (Need primary key parameter) -->
+<!--<insert id="saveArchiveTransfer" parameterType="com.yz.webmanage.model.ArchiveTransfer" >
+insert into EAMS_ARCHIVE_TRANSFER(transfer_no,opertime,operid,operprivilege,operdepid,project_name,unit,piece,dep_transfer,dep_receive,name_transfer,name_receive,date_transfer,date_receive,is_confirm,confirm_time,confirm_userid,transfer_type) values(#{transfer_no,jdbcType=VARCHAR},#{opertime,jdbcType=TIMESTAMP},#{operid,jdbcType=VARCHAR},#{operprivilege,jdbcType=VARCHAR},#{operdepid,jdbcType=VARCHAR},#{project_name,jdbcType=VARCHAR},#{unit,jdbcType=VARCHAR},#{piece,jdbcType=VARCHAR},#{dep_transfer,jdbcType=VARCHAR},#{dep_receive,jdbcType=VARCHAR},#{name_transfer,jdbcType=VARCHAR},#{name_receive,jdbcType=VARCHAR},#{date_transfer,jdbcType=VARCHAR},#{date_receive,jdbcType=VARCHAR},#{is_confirm,jdbcType=VARCHAR},#{confirm_time,jdbcType=TIMESTAMP},#{confirm_userid,jdbcType=VARCHAR},#{transfer_type,jdbcType=VARCHAR})
+</insert>-->
+
+<!-- update  -->
+<update id="updateArchiveTransfer" parameterType="com.yz.webmanage.model.ArchiveTransfer" >
+update EAMS_ARCHIVE_TRANSFER set opertime=#{opertime},operid=#{operid},operprivilege=#{operprivilege},operdepid=#{operdepid},project_name=#{project_name},unit=#{unit},piece=#{piece},dep_transfer=#{dep_transfer},dep_receive=#{dep_receive},name_transfer=#{name_transfer},name_receive=#{name_receive},date_transfer=#{date_transfer},date_receive=#{date_receive},is_confirm=#{is_confirm},confirm_time=#{confirm_time},confirm_userid=#{confirm_userid},transfer_type=#{transfer_type} where transfer_no=#{transfer_no}
+</update>
+
+<!-- delete by primary key-->
+<delete id="delArchiveTransfer" >
+delete from EAMS_ARCHIVE_TRANSFER where transfer_no=#{transfer_no}
+</delete>
+
+<!-- load by primary key -->
+<select id="loadArchiveTransfer" resultMap="archivetransfer">
+select transfer_no,opertime,operid,operprivilege,operdepid,project_name,unit,piece,dep_transfer,dep_receive,name_transfer,name_receive,date_transfer,date_receive,is_confirm,confirm_time,confirm_userid,transfer_type from EAMS_ARCHIVE_TRANSFER where transfer_no=#{transfer_no}
+</select>
+
+</mapper>
