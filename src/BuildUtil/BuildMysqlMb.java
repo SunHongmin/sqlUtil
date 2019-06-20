@@ -99,7 +99,7 @@ public class BuildMysqlMb{
     	StringBuilder s = new StringBuilder();
         String comments = "";
         s.append(this.javaFileHeadInfo);
-        s.append("package "+this.packagename+".model;\r\n");
+        s.append("package "+this.packagename+".model;\r\n\r\n");
         s.append("import java.io.Serializable;\r\n");
         StringBuilder s2 = new StringBuilder();
         s2.append("public class " + this.ClassName + " implements Serializable {\r\n\r\n");
@@ -117,7 +117,7 @@ public class BuildMysqlMb{
             String type = rsmd.getColumnTypeName(i);// 属性类型
             type = getType(type, table, name);
             if(type.equals("BigDecimal") && !BigDeciImport){
-            	s.append("import java.math.BigDecimal;\r\n");
+            	s.append("import java.math.BigDecimal;\r\n\r\n");
             	BigDeciImport = true;
             }else if(type.equals("Date") && !dateImport){
             	s.append("import java.util.Date;\r\n\r\n");

@@ -19,7 +19,7 @@ import BuildUtil.StartBuild;
 public class Start {
 
 	public static void main(String[] args) throws Exception{
-		String tableName = "EAMS_ARCHIVE_TRANSFER";
+		String tableName = "EAMS_ARCHIVE_TRANSFER_ITEM";
 		StartBuild.dataSourceMysqlMybatis(tableName);
 	}
 }
