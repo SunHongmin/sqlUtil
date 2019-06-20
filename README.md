@@ -8,4 +8,4 @@
 
 入口类：src/BuildStartApplication/Start.java
 
-IDE:eclipse
+IDE：eclipse
