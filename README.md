@@ -3,3 +3,6 @@
 简单的小工具，节省大量开发时间
 
 当前版本支持数据库为mysql,持久层框架mybatis，后续支持oracle及hibernate
+
+使用说明
+入口类：src/BuildStartApplication/Start.java
