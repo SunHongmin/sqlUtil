@@ -335,7 +335,7 @@ public class BuildMysqlMb{
     	fileBody.append("@RequestMapping(\"/admin/"+this.classname+"\")\r\n");
     	fileBody.append("public class "+this.ClassName+"Controller {\r\n\r\n");
     	fileBody.append("\t@Resource\r\n");
-    	fileBody.append("\tprivate "+this.ClassName+"Service "+this.className+"Serivce;\r\n\r\n");
+    	fileBody.append("\tprivate "+this.ClassName+"Service "+this.className+"Service;\r\n\r\n");
     	fileBody.append("}");
     	return fileBody.toString();
     }
