@@ -1,2 +1,12 @@
+
 123123
 local add text
+
+123123
+remote add text
+
+合并冲突
+
+参考原文
+https://blog.csdn.net/Smile_Luckly/article/details/74629177
+
