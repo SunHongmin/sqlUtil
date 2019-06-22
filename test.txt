@@ -10,3 +10,12 @@ remote add text
 参考原文
 https://blog.csdn.net/Smile_Luckly/article/details/74629177
 
+
+
+add to index 命令
+相当于使用命令行的 #git add ...操作,将文件的改动放入暂存区，通常使用egit插件进行commit时，会省略git  add 
+,默认commit之前会进行add to index操作
+
+
+github网站上中文编码是什么
+
