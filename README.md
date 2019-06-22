@@ -9,3 +9,5 @@
 入口类：src/BuildStartApplication/Start.java
 
 IDE：eclipse
+
+jar依赖文件位置：工程下 dependency-jar文件夹内，buildpath即可
