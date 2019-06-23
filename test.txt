@@ -19,3 +19,5 @@ add to index 命令
 
 github网站上中文编码是什么
 
+放弃commit之后的改动，需要先执行commit，然后在history中使用checkout恢复之前的状态
+
