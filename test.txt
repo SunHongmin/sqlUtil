@@ -17,9 +17,12 @@ add to index 命令
 ,默认commit之前会进行add to index操作
 
 
-github网站上中文编码是什么
+github网站上中文编码是什么?
+如果出现线上中文正常线下乱码，尝试更改本地文件编码
 
 放弃commit之后的改动，需要先执行commit，然后在history中使用checkout恢复之前的状态
 
 123123132
+
+删除远程分支：项目上选择push,在弹出界面中点选Add delete ref specification 然后选择要删除的分支
 
