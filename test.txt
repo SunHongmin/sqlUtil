@@ -22,7 +22,11 @@ github网站上中文编码是什么?
 
 放弃commit之后的改动，需要先执行commit，然后在history中使用checkout恢复之前的状态
 
+
 1231231322222222
+
+123123132666666666
+
 
 删除远程分支：项目上选择push,在弹出界面中点选Add delete ref specification 然后选择要删除的分支
 
