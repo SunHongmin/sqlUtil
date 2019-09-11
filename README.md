@@ -1,5 +1,5 @@
 样板代码生成器
-详细说明请参照：https://blog.csdn.net/qq_41788977/article/details/100697628 轻量级mysql生成工具SqlUtil使用说明
+使用前参考：https://blog.csdn.net/qq_41788977/article/details/100697628 轻量级mysql生成工具SqlUtil使用说明
 根据数据库表名生成对应实体类，增删改查基本sql，service层和controller层
 简单的小工具，节省大量开发时间
 
